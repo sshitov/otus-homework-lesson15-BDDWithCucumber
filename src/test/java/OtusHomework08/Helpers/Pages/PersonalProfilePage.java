@@ -6,12 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 @Component
 public class PersonalProfilePage {
 
-    @PostConstruct
     public void init() {
         PageFactory.initElements(ChromeWebDriver.getDriver(), this);
     }

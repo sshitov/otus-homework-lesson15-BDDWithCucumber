@@ -9,15 +9,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 @Component
 public class MainPage {
 
     @Value("${baseUrl}")
     protected String baseUrl;
 
-    @PostConstruct
     public void init() {
         PageFactory.initElements(ChromeWebDriver.getDriver(), this);
     }
